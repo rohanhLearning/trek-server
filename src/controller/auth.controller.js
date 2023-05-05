@@ -52,7 +52,7 @@ const login = async (req, res) => {
             email: user.email,
             role: user.role,
             name: user.name,
-        }, process.env.SECRET, {expiresIn: "3 days"});
+        }, 'secret', {expiresIn: "3 days"});
 
         let result = {
             name: user.name,

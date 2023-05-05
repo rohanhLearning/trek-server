@@ -9,7 +9,7 @@ const employeeAuth = (req, res, next) => {
     }
     const token = authHeader.split(" ")[1];
     try{
-        const payload = jwt.verify(token, process.env.SECRET);
+        const payload = jwt.verify(token, 'secret');
         if(!payload){
             return res.status(400).json({
                 message: "Invalid token"
