@@ -7,7 +7,9 @@
     "mongoose": "^7.1.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "pstart": "pm2 start server.js",
+    "pstop": "pm2 kill"
   },
   "name": "node",
   "version": "1.0.0",
